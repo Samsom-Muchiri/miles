@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="cart css.css">
+    <title>Document</title>
+</head>
+<body>
+   <!--menu section-->
+   <div class="menu">
+    <i class="fa fa-times" aria-hidden="true" onclick="closemenu()"></i>
+    <div class="menu-container">
+    <div class="nav">
+        <p> Home </p>
+        <p> Work</p>  
+        <p>About</p>
+        <p> Blog</p>
+        <p> Contact</p>
+    </div>
+    <div class="test">
+        <p>
+            <h3>Let’s find solutions<br>
+            together?</h3> <br>
+            Use my contacts beloyou need to put a project on the move, let’s work on it!<br>
+            joaovdesign(a)gmail.com<br>
+            <button>contact</button>
+        </p>
+    </div>
+   </div>
+</div>
+
+<nav class="navbar">
+    <div class="load">
+        <p>Miles</p>
+    </div>
+    
+    <div class="load l2">
+        <p>Miles</p>
+    </div>
+    <div class="log"><p>Miles</p></div>
+    <ul class="lnav">
+        <li><a href="index.html" class="delay">home<br><hr></a></li>
+        <li><a href="" class="delay">Work<br><hr></a></li>
+        <li><a href="about.html" class="delay">Products<br><hr></a></li>
+        <li><a href="services.html" class="delay">Services<br><hr></a></li>
+        <li><div class="fa-shopping-cart-icon"  data-count="0"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: small;" onclick="opencart()"></i></div><br><hr></li>
+    </ul>
+    <div class="menubars"><i class="fa fa-bars" aria-hidden="true" onclick="openmenu()"></i></div><div class="fa-shopping-cart-icon2"  data-count="0"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: small;" onclick="opencart()"></i></div>
+</nav>
+<!--cart slider section-->
+<div class="cart-slider">
+    <p>Cart<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: small;"></i><i class="fa fa-times" aria-hidden="true" onclick="closecart()" style="font-size:medium"></i><br><hr></p>
+    <div class="cart-slider-container">        
+    <div class="cart-items" style="display: none;">
+            <div class="c-item">
+            <u><p class="title">Items</p></u><br>
+            <div class="cart-item-img"></div>
+            </div>
+             <div class="price">
+                <u><p>Price</p></u>
+                <p class="amount">0$</p>
+             </div>
+             <div class="quantity">
+                <u><p>Quantity</p></u>
+                <input type="number" class="quantity-input" value="1" ><button class="rbtn">Remove</button>
+             </div>
+    </div>
+    
+   </div>
+    
+     <hr>
+    <p>Total</p><p class="total" ></p>
+    <button class="check-out" onclick="closecart()">Check out</button>
+    
+    </div>
+<!--cart section-->
+<div class="container">
+    <div class="item-container">
+        <div class="item"><img src="images/shirt1.jpg" alt="" width="100%" height="100%" class="item-image"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <div class="cart-input">
+        <h1 class="cart-title">Good vibes </h1>
+        <div class="size">
+        <p>Size</p><br>
+            <p class="s">S</p>
+            <p class="s">M</p>
+            <p class="s">L</p>
+            <p class="s">XL</p>
+            <p class="s">XXL</p>
+            <p class="s">XXL</p>
+        </div><br>
+      <p class="item-price">$40</p>
+        <button onclick="opencart()" class="cart-btn">ADD TO CART</button>
+        <p>Description</p>
+        <hr>
+        <p>Product information</p>
+        <p>The Good Vibes Tee. This unisex shirt made of cotton will only bring you good vibes. It is comfortable to wear, can be styled with any piece of clothing and the simple detail on the chest adds a finishing touch to your look. Good vibes only!</p>
+       
+    </div>
+</div>
+<!--pay section-->
+<div class="pay-container">
+    <div class="close-popup"><i class="fa fa-times " aria-hidden="true" style="font-size:medium"></i></div>
+    <form action="">
+        <input type="text" placeholder="First Name"><input type="text" placeholder="Second Name"><br>
+        <input type="number" placeholder="Mobile Number" required><br>
+        <textarea name="" id="" cols="30" rows="3" placeholder="Delivey Address"></textarea><br>
+        City
+        <select name="" id="">
+            <option value="">Nairobi</option>
+            <option value="">Mombasa</option>
+            <option value="">Kisumu</option>
+            <option value="">Nakuru</option>
+            <option value="">Eldoret</option>
+            <option value="">Nyeri</option>
+        </select>
+        <h3>Payment Details</h3>
+        <hr>
+        <input type="text" placeholder="Credit Card Number" required><br>
+        <input type="text" placeholder="Expiring MM/YY" required><input type="text" placeholder="CVV Code" required><br>
+        <input type="text" placeholder="Postal Code" required>
+        <input type="submit" class="check-out-btn" id="check-out-btn">
+    </form>
+</div>
+<script src="main.js"></script>  
+<script>
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else{
+    ready()
+}
+
+//cart count section
+   const cartIcon = document.querySelector('.fa-shopping-cart-icon');
+const clickBtn = document.querySelector('.cart-btn');
+
+clickBtn.addEventListener('click', function() {
+  var count = parseInt(cartIcon.getAttribute('data-count')) + 1;
+  cartIcon.setAttribute('data-count', count);
+ 
+});
+
+function ready() {
+var removebtn = document.getElementsByClassName('rbtn');
+for (var i = 0; i < removebtn.length; i++){
+    var button = removebtn[i]
+    button.addEventListener('click', removeCartItem);
+  }; 
+    var quantityInput = document.getElementsByClassName('quantity-input');
+    for (var i = 0; i < quantityInput.length; i++) {
+        var quantity = quantityInput[i];
+        quantity.addEventListener('change', quantityChanged);
+    };
+    var addTocartButton = document.querySelector('.cart-btn');
+        addTocartButton.addEventListener('click', addtocartCliked);
+    document.querySelector('.check-out-btn').addEventListener('click', removeAllCartitems)
+    };
+    function updatecartTotal() {
+    var cartContainer = document.getElementsByClassName('cart-slider')[0];
+    var cartItems = cartContainer.getElementsByClassName('cart-items');
+    var total = 0;
+    for (var i = 0; i < cartItems.length; i++) {
+        var cartItem = cartItems[i];
+        var price = cartItem.getElementsByClassName('amount')[0];
+        var quantityElement = cartItem.getElementsByClassName('quantity-input')[0];
+        var priceValue = parseFloat(price.innerHTML.replace('$', ''));
+        var quantity = quantityElement.value;
+        total = total + (quantity * priceValue);
+    }
+    document.getElementsByClassName('total')[0].innerHTML = '$' + total
+}
+function removeAllCartitems(){
+    alert('Thank you fr your purchase');
+    var cartItem = document.getElementsByClassName('cart-slider-container')[0]
+    while (cartItem.hasChildNodes()) {
+        cartItem.removeChild(cartItem.firstChild);
+       
+    };
+    updatecartTotal(); 
+    return;
+};
+    function removeCartItem(event) {
+      var buttonclicked = event.target;
+        buttonclicked.parentElement.parentElement.remove();
+        var count = parseInt(cartIcon.getAttribute('data-count')) - 1;
+        cartIcon.setAttribute('data-count', count);
+        updatecartTotal();
+    };
+function  addtocartCliked() {
+    var title = document.querySelector('.title').innerText;
+    var price = document.querySelector('.item-price').innerHTML;
+    var image = document.querySelector('.item-image').src;
+   addItemToCart(title, price, image);
+   updatecartTotal()
+}
+function  addItemToCart(title, price, image) {
+    var cartRow = document.createElement('div');
+    var cartItemsName = document.querySelector('.cart-title').innerText;
+    if (cartItemsName == title){
+        alert('This item is already added');
+        return
+    }
+    cartRow.innerHTML = `<div class="cart-items">
+            <div class="c-item">
+            <u><p class="title">${title}</p></u><br>
+            <div class="cart-item-img"><img src="${image}" class="item-image"></div>
+            </div>
+             <div class="price">
+                <u><p>Price</p></u>
+                <p class="amount">${price}</p>
+             </div>
+             <div class="quantity">
+                <u><p>Quantity</p></u>
+                <input type="number" class="quantity-input" value="1" ><button class="rbtn">Remove</button>
+             </div>
+    </div>`;
+    var cartContainer = document.getElementsByClassName('cart-slider-container')[0];
+    cartContainer.append(cartRow);
+    cartRow.querySelector('.rbtn').addEventListener('click', removeCartItem);
+    cartRow.querySelector('.quantity-input').addEventListener('change', quantityChanged)
+}
+function quantityChanged(event) {
+    var quantity = event.target;
+   if (isNaN(quantity.value) || quantity.value <= 0) {
+        quantity.value = 1;
+   } else {
+    updatecartTotal();
+   }
+}
+//cart update sectoin
+
+//payment popUp section
+document.querySelector('.close-popup').addEventListener('click', _ =>{
+  document.querySelector('.pay-container').style.display = 'none';
+  document.body.style.backgroundColor = '';
+});
+document.querySelector('.check-out').addEventListener("click", _ =>{
+    document.querySelector('.pay-container').style.display = 'block';
+    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+})
+</script>
+</body>
+</html>

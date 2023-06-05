@@ -1,0 +1,552 @@
+
+body
+{
+    overflow-x: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.load
+{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: .5s;
+    transform: translateX(100%);
+    background-color: black;
+    z-index: 12;
+   
+}
+.l2
+{
+     animation: loading .5s linear forwards;
+}
+.load p
+{
+    margin-top: 300px;
+    font-size: 170px;
+}
+.load-in
+{
+    transform: translateX(0%);
+}
+@keyframes loading {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
+nav ul
+{
+    display: inline-flex;
+   position: absolute;
+   top: 50px;
+   right: 200px;
+}
+nav ul li
+{
+   margin-left: 70px;
+   list-style: none;
+}
+nav ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+nav ul li a hr
+{
+    width: 0px;
+    margin-top: 5px;
+    transition: .5s;
+}
+nav ul li a:hover hr
+{
+    width: auto;
+}
+.sub-menu
+{
+    position: absolute;
+    padding: 50px 30px 50px 30px;
+    top: 40px;
+    visibility: hidden;
+    border: solid 1px white;
+}
+nav ul li:hover .sub-menu
+{
+    visibility: visible;
+}
+.menu
+{
+    width: 100%;
+    height: 0%;
+    background-color: greenyellow;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    overflow: hidden;
+    transition: height .2s;
+    z-index: 11;
+}
+.fa-times, .fa-bars
+{
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+.menu-container
+{
+    margin: 10%;
+     display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.nav
+{
+    font-size: 40px;
+    line-height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+}
+.nav p
+{
+     transition:  .5s;
+}
+.nav p:hover
+{
+    letter-spacing: 10px;
+}
+.test
+{
+    font-size: 25px;
+    margin-top: 30px;
+}
+.test button
+{
+    background-color:  greenyellow;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border: solid 2px black;
+    margin-top: 20%;
+    box-shadow: inset 0px 0px;
+    transition: .1s;
+}
+.test button:hover
+{
+    box-shadow: inset 0px -50px black;
+    color: white;
+}
+/*nav section*/
+nav
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1px;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0%;
+    transition: .5s;
+}
+nav p
+{
+    font-size: 40px;
+    margin-left: 30px;
+}
+nav .fa
+{
+    font-size: 30px;
+    margin-top:3%;
+    right: 40px;
+}
+.visible
+{
+    top: -140px;
+    transition: .5s .5s;
+}
+/*top section*/
+.top
+{
+    width: 100%;
+    height: 60vh;
+    background-color: black;
+    margin-top: 100px;
+}
+.top p
+{
+    margin-left: 20%;
+    color: white;
+    font-size: 60px;
+}
+.intro
+{
+    margin-top: 350px;
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: rgba(127, 255, 212, 0.473);
+}
+.fst-img
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 59, 46, 0.473);
+}
+.sell-cnt
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.simg 
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 37, 35, 0.904);
+}
+.item-container
+{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 10px;
+    height: 90vh;
+
+}
+.items
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(82, 41, 41);
+}
+.large
+{
+    width: 100%;
+    height: 100%;
+    background-color: blueviolet;
+}
+.ic2 
+{
+    margin-top: 500px;
+}
+.item2-container
+{
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+}
+.items-2
+{
+    margin: 20px;
+    background-color: rgb(82, 44, 44);
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+/*final section*/
+.bottom
+{
+    background-color: rgba(0, 0, 0, 0.932);
+    width: 100%;
+    color: rgb(236, 230, 230);
+    margin-left: 0%;
+    margin-top: 0px;
+    height: 500px;
+}
+.test5
+{
+    width: 500px;
+    padding: 10px;
+    margin: 5% 0% 3% 5% ;
+}
+.test5 h2
+{
+    font-size: 30px;
+   margin: 100px 10px;
+   color: greenyellow;
+}
+.info
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    font-size: larger;
+    width: 600px;
+    margin-left: 30px;
+}
+.footer
+{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    margin: 0%;
+}
+.footer p
+{
+    margin-left: 20px;
+}
+.btn 
+{
+    padding: 10px 30px 10px 30px;
+    position: absolute;
+    top: -100px;
+    right: 40px;
+    color: white;
+    background-color:  rgba(0, 0, 0, 0.932);
+    border: solid 2px greenyellow;
+    box-shadow: inset 0px 0px white;
+    transition: .5s;
+}
+.btn:hover
+{
+    box-shadow: inset 0px -50px greenyellow;
+    color: black;
+    border: solid 2px red;
+}
+/*cart section*/
+.fa-shopping-cart-icon::before
+{
+    content: attr(data-count);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px ;
+    right: -16px;
+    text-align: center;
+}
+.cart-icon2
+{
+    width: fit-content;
+    position: absolute;
+    top: 50px;
+    right: 100px;
+}
+
+/*cart section*/
+.cart-icon2::before
+{
+    content: attr(data-count);
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px ;
+    right: -16px;
+    text-align: center;
+    color: white;
+}
+.cart-slider-container
+{
+    overflow-y: scroll;
+    height: 60%;
+    width: 100%;
+    
+}
+.cart-slider-container::-webkit-scrollbar
+{
+    width: 3px;
+}
+.cart-slider-container::-webkit-scrollbar-thumb
+{
+    background-color: black;
+}
+.cart-slider
+{
+    position: fixed;
+    height: 75%;
+    width: 40%;
+    right: 0%;
+    top: 20%;
+    font-size: large;
+    transform: translateX(650px);
+    background-color: white;
+    border: solid 1px;
+    z-index: 6;
+    transition: .5s;
+}
+.cart-slider p
+{
+    margin-left: 20px;
+}
+.cart-items
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.cart-items button
+{
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    border: solid ;
+    background-color: black;
+    color: white;
+}
+.cart-item-img
+{
+    position: relative;
+    width: 50%;
+    height: 70%;
+    margin: -30px 0px 10px 20px;
+    background-color: aqua;
+}
+.items-2
+{
+    position: relative;
+}
+.i-title
+{
+    position: absolute;
+    top: 10%;
+}
+.item-image
+{
+    width: 100%;
+    height: 100%;
+}
+.quantity-input
+{
+    width: 25px;
+}
+.price1 
+{
+    position: absolute;
+    font-weight: 1000;
+    margin: 10px;
+}
+.menubars
+{
+    display: none;
+}
+.check-out
+{
+    all: unset;
+    width: 60%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0% 20% 10% 20%;
+    padding: 5px 0px 5px;
+}
+.lnav
+    {
+        right: 10%;
+    }
+/*pay container section*/
+.pay-container
+{
+    border: solid 2px;
+    box-shadow: 2px 0px 3px 5px rgba(0, 0, 0, 0.164);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: rgb(245, 243, 241);
+    display: none;
+}
+.pay-container form 
+{
+    margin: 30px;
+}
+.pay-container input
+{
+    width: 100%;
+    margin: 20px 10px 20px 0px;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    border-bottom: solid 1px;
+}
+#check-out-btn
+{
+    position: static;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.fa-shopping-cart-icon2
+{
+    display: none;
+}
+@media (max-width:768px) {
+   
+    .lnav li
+    {
+        margin-left: 50px;
+    }
+    .lnav
+    {
+        right: 10%;
+    }
+    .navbar
+    {
+        width: 100vw;
+    }
+    .item-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    .menu-container
+    {
+        display: block;
+    }
+    .cart-slider
+    {
+        width: 70vw;
+    }
+}
+@media (max-width:680px) {
+    .menubars
+    {
+        display: block;
+    }
+    .lnav
+    {
+        display: none;
+    }
+    .navbar
+    {
+        width: 100vw;
+    }
+    .intro
+    {
+        display: block;
+    }
+}
+@media (max-width:600px) {
+    .item-container
+    {
+       display: block;
+    }
+    body 
+    {
+        width: 100vw;
+    }
+}
+@media (max-width:425px) {
+    .item-container
+    {
+        width: 100vw;
+        overflow-x: hidden;
+        height: max-content;
+        
+    }
+    .cart-slider-container
+    {
+        width: 100%;
+    }
+    .cart-slider
+    {
+        width: 98vw;
+    }
+}

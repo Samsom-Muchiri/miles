@@ -1,0 +1,448 @@
+body
+{
+    overflow-x: hidden;
+    margin: 0%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.load
+{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: .5s;
+    transform: translateX(100%);
+    background-color: black;
+    z-index: 12;
+   
+}
+.animate
+{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: .5s;
+}
+.anim 
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.l2
+{
+     animation: load .5s linear forwards;
+}
+.load p
+{
+    margin-top: 300px;
+    font-size: 170px;
+}
+.load-in
+{
+    transform: translateX(0%);
+}
+@keyframes load {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
+nav ul
+{
+    display: inline-flex;
+   position: absolute;
+   top: 50px;
+   right: 200px;
+}
+nav ul li
+{
+   margin-left: 70px;
+   list-style: none;
+}
+nav ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+}
+nav ul li a hr
+{
+    width: 0px;
+    margin-top: 5px;
+    transition: .5s;
+}
+nav ul li a:hover hr
+{
+    width: auto;
+}
+.menu
+{
+    width: 100%;
+    height: 0%;
+    background-color: greenyellow;
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    overflow: hidden;
+    transition: height .2s;
+    z-index: 11;
+}
+.fa-times, .fa-bars
+{
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px
+}
+.menu-container
+{
+    margin: 10%;
+     display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.nav
+{
+    font-size: 40px;
+    line-height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav p
+{
+     transition:  .5s;
+}
+.nav p:hover
+{
+    letter-spacing: 10px;
+}
+.nav p a
+{
+    text-decoration: none;
+    color: black;
+}
+.test
+{
+    font-size: 25px;
+    margin-top: 30px;
+}
+.test button
+{
+    background-color:  greenyellow;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    border: solid 2px black;
+    margin-top: 20%;
+    box-shadow: inset 0px 0px;
+    transition: .1s;
+}
+.test button:hover
+{
+    box-shadow: inset 0px -50px black;
+    color: white;
+}
+/*nav section*/
+nav
+{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1px;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0%;
+    transition: .5s;
+}
+nav p
+{
+    font-size: 40px;
+    margin-left: 30px;
+}
+nav .fa
+{
+    font-size: 30px;
+    margin-top:3%;
+    right: 40px;
+}
+.visible
+{
+    top: -140px;
+    transition: .5s .5s;
+}
+/*top section*/
+.top-section
+{
+    width: 100%;
+    
+    margin-top: 200px;
+}
+.test
+{
+    width: 600px;
+    margin-left: 25vw;
+}
+.test h4
+{
+    font-size: 60px;
+}
+.test2
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: black;
+}
+.s1
+{
+    color: white;
+    margin: 60px 20px 60px 20px;
+}
+/*section 2*/
+.section2
+{
+    width: 100%;
+    height: 50vw;
+    background-image: url(images/office.jpg);
+    position: relative;
+}
+.download
+{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    background-color: rgb(35, 65, 35);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+}
+.download p 
+{
+    padding: 40px;
+    font-size: 30px;
+}
+.download button 
+{
+    background-color: black;
+    color: white;
+    padding: 10px 30px 10px 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.fa-long-arrow-right
+{
+    position: static;
+    font-size: 20px;
+    transform: scaleX(1.5);
+    margin-left: 20px;
+}
+/*final section*/
+.bottom
+{
+    background-color: rgba(0, 0, 0, 0.932);
+    width: 100%;
+    color: rgb(236, 230, 230);
+    margin-left: 0%;
+    height: fit-content;
+    height: 500px;
+}
+.test5
+{
+    width: 80%;
+    padding: 10px;
+    margin: 0% 0% 3% 5% ;
+}
+.test5 h2
+{
+    font-size: 30px;
+   margin: 50px 10px;
+   color: greenyellow;
+}
+.info
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    font-size: larger;
+    width: 800px;
+    margin-left: 30px;
+}
+.footer
+{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    margin: 0%;
+}
+.footer p
+{
+    margin-left: 20px;
+}
+.btn 
+{
+    padding: 10px 30px 10px 30px;
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    color: white;
+    background-color:  rgba(0, 0, 0, 0.932);
+    border: solid 2px greenyellow;
+    box-shadow: inset 0px 0px white;
+    transition: .5s;
+}
+.btn:hover
+{
+    box-shadow: inset 0px -50px greenyellow;
+    color: black;
+    border: solid 2px red;
+}
+.menubars
+{
+    display: none;
+}
+@media (max-width:878px) {
+    
+    .test
+    {
+        margin-left: 5vw;
+    }
+    .download
+    {
+        transform: scale(.8);
+        top: 30%;
+    }
+    .lnav
+    {
+        right: 2%;
+        top: 5%;
+    }
+    nav ul li 
+    {
+        margin: 30px;
+    }
+}
+@media (max-width:732px) {
+    .menubars
+    {
+        display: block;
+    }
+    .lnav
+    {
+        display: none;
+    }
+    .menu-container
+    {
+        display: block;
+    }
+    .fa-shopping-cart-icon
+    {
+        display: block;
+    }
+}
+@media (max-width: 425px) {
+    .navbar
+    {
+        width: 525px;
+    }
+    .menu
+    {
+        width: 100%;
+    }
+   
+    .navbar
+    {
+        width: 100vw;
+    }
+    .lnav
+    {
+        display: none;
+    }
+    .test
+    {
+        width: 80%;
+    }
+    .test2
+    {
+        margin: 0% 0% 0% 0%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .s1:nth-child(3)
+    {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        margin-top: -20px;
+    }
+    .download
+    {
+        position: absolute;
+        top: -10%;
+        left: 1%;
+        transform: scaleY(.8);
+    }
+    .bottom
+    {
+        width: 100vw;
+    }
+    .test5
+    {
+        width: 90%;
+        padding: 0px;
+        margin: 0%;
+    }
+    .test5 h2
+    {
+        margin-top: 0%;
+    }
+    .test5 h2, p
+    {
+        width: 80%;
+        margin-left: 30px;
+    }
+    .info
+    {
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+    }
+    .info p:nth-child(3)
+    {
+        grid-row: 2/3;
+        grid-column: 1/3;
+        margin-top: -30px;
+    }
+    .footer
+    {
+        width: 100%;
+        padding: 0px;
+    }
+    .btn
+    {
+        position: relative;
+        bottom: 0%;
+        left: 70%;
+    }
+}
+@media (max-width:375px) {
+    .navbar
+    {
+        width: 100vw;
+    }
+    .container3
+    {
+        position: relative;
+    }
+    .download
+    {
+        transform: scale(1);
+        width: 100vw;
+        position: absolute;
+        margin-top: -30px;
+        height: 30%;
+    }
+    .download button 
+    {
+        position: absolute;
+        bottom: -250px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style contenteditable="true" style="display:block">
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  position: absote;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 216, 230, 0.979);
+  text-align: center;
+  font-size: 40px;
+  line-height: 200px;
+}
+
+.box:before {
+  content: attr(data-count);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  line-height: 200px;
+  color: white;
+}
+
+#click-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box" data-count="0"></div>
+    <button id="click-btn">Click Me</button>
+  </div>
+  
+  <script>
+  var box = document.querySelector('.box');
+var clickBtn = document.getElementById('click-btn');
+
+clickBtn.addEventListener('click', function() {
+  console.log('cliked');
+  var count = parseInt(box.getAttribute('data-count')) + 1;
+  console.log(count);
+  box.setAttribute('data-count', count);
+  box.setAttribute('data-before-count', count);
+});
+
+  </script>
+</body>
+</html>
